@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<!-- Select a Product Configuration -->
+		<InstallShieldProductConfiguration>Express</InstallShieldProductConfiguration>
+		<!-- Select a Visual Studio Configuration / InstallShield Release -->
+		<Configuration>Debug</Configuration>
+		<InstallShieldRelease>$(Configuration)</InstallShieldRelease>
+	</PropertyGroup>
+	<ItemGroup>
+		<!-- The InstallShieldProject item selects the project to build -->
+		<InstallShieldProject Include="$(MSBuildProjectDirectory)\$(MSBuildProjectName).isl"/>
+		<!-- The InstallShieldReleaseFlags sets Release Flags -->
+		<!--<InstallShieldReleaseFlags Include=""/>-->
+		<!-- The InstallShieldMergeModulePath specifies what directories are
+		searched for Merge Modules -->
+		<!--<InstallShieldMergeModulePath Include=""/>-->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The ProjectReference items refer to any Visual Studio solutions you want to automatically probe for Project Output Groups.  -->
+	</ItemGroup>
+	<ItemGroup>
+		<!-- The TaggedOutputs items allow you to explicitly add extra files to output groups. Each item must include both Name and OutputGroup, as well as TargetPath metadata values. -->
+		<!--<TaggedOutputs Include="C:\My Test Exe.exe">
+			<Name>My Test Project</Name>
+			<OutputGroup>Primary output</OutputGroup>
+			<TargetPath>My Test Exe.exe</TargetPath>
+		</TaggedOutputs> -->
+	</ItemGroup>
+	<Import Project="$(MSBuildExtensionsPath32)\InstallShield\2013Limited\InstallShield.targets"/>
+	<ItemGroup>
+		<ProjectReference Include="..\PVentaEVG\POS.csproj">
+			<Name>POS</Name>
+			<Project>{478A31D3-C36D-444F-AD62-1EC49FF9F5A4}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PVentaEVG\Tyro\POSDLL.csproj">
+			<Name>POSDLL</Name>
+			<Project>{8E8229DA-3950-4E02-AE33-3101752C15DB}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PVentaEVG\Tyro\POSDLL.Reporting.csproj">
+			<Name>POSDLL.Reporting</Name>
+			<Project>{99C54DB2-AD9F-4062-A09F-8E77FA172046}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PVentaEVG\Tyro\POSDLL.Security.csproj">
+			<Name>POSDLL.Security</Name>
+			<Project>{2023700A-9A26-4C56-8A0F-D829FA82323A}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PVentaEVG\Tyro\POSDLL.Ticket.csproj">
+			<Name>POSDLL.Ticket</Name>
+			<Project>{B73D1C92-F62C-4412-B42F-8F7C324A41F1}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PVentaEVG\Tyro\POSDLL.Utilities.csproj">
+			<Name>POSDLL.Utilities</Name>
+			<Project>{AC61B56C-092C-4D0D-8BBB-6366B299F17E}</Project>
+		</ProjectReference>
+		<ProjectReference Include="..\PVentaEVG\Tyro\POSDLL.Windows.Forms.csproj">
+			<Name>POSDLL.Windows.Forms</Name>
+			<Project>{A091B1E2-A4F2-49D3-9045-EB836121D0D5}</Project>
+		</ProjectReference>
+	</ItemGroup>
+</Project>

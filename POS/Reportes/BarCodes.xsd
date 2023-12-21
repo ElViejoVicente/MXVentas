@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BarCodes" targetNamespace="http://tempuri.org/BarCodes.xsd" xmlns:mstns="http://tempuri.org/BarCodes.xsd" xmlns="http://tempuri.org/BarCodes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BarCodes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BarCodes" msprop:Generator_UserDSName="BarCodes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BarCodes" msprop:Generator_TableClassName="BarCodesDataTable" msprop:Generator_TableVarName="tableBarCodes" msprop:Generator_TablePropName="_BarCodes" msprop:Generator_RowDeletingName="BarCodesRowDeleting" msprop:Generator_UserTableName="BarCodes" msprop:Generator_RowChangingName="BarCodesRowChanging" msprop:Generator_RowEvHandlerName="BarCodesRowChangeEventHandler" msprop:Generator_RowDeletedName="BarCodesRowDeleted" msprop:Generator_RowEvArgName="BarCodesRowChangeEvent" msprop:Generator_RowChangedName="BarCodesRowChanged" msprop:Generator_RowClassName="BarCodesRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ID_PRODUCT" msprop:Generator_ColumnVarNameInTable="columnID_PRODUCT" msprop:Generator_ColumnPropNameInRow="ID_PRODUCT" msprop:Generator_ColumnPropNameInTable="ID_PRODUCTColumn" msprop:Generator_UserColumnName="ID_PRODUCT" type="xs:string" minOccurs="0" />
+              <xs:element name="DESC_PRODUCT" msprop:Generator_ColumnVarNameInTable="columnDESC_PRODUCT" msprop:Generator_ColumnPropNameInRow="DESC_PRODUCT" msprop:Generator_ColumnPropNameInTable="DESC_PRODUCTColumn" msprop:Generator_UserColumnName="DESC_PRODUCT" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
