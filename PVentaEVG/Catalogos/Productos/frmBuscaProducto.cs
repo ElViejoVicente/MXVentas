@@ -167,7 +167,7 @@ namespace POSApp.Forms
             lvProductos.Columns.Add("Nombre del artículo", 290, HorizontalAlignment.Left);
             lvProductos.Columns.Add("Medida", 100, HorizontalAlignment.Left);
             lvProductos.Columns.Add("Grupo", 100, HorizontalAlignment.Left);
-            lvProductos.Columns.Add("Exist", 70, HorizontalAlignment.Right);
+            //lvProductos.Columns.Add("Exist", 70, HorizontalAlignment.Right);
             lvProductos.Columns.Add("P.Público", 70, HorizontalAlignment.Right);
             //lvProductos.Columns.Add("P.Trab", 70, HorizontalAlignment.Right);
             //lvProductos.Columns.Add("P.May", 70, HorizontalAlignment.Right);
