@@ -208,11 +208,11 @@ namespace POSApp.Forms
                     lvProductos.Items[I].SubItems.Add(drReadData["DESC_PRODUCTO"].ToString());
                     lvProductos.Items[I].SubItems.Add(drReadData["DESC_UNIDAD_MEDIDA"].ToString());
                     lvProductos.Items[I].SubItems.Add(drReadData["DESC_GRUPO"].ToString());
-                    lvProductos.Items[I].SubItems.Add(String.Format("{0:N}", drReadData["EXISTENCIA"]));
+                    //lvProductos.Items[I].SubItems.Add(String.Format("{0:N}", drReadData["EXISTENCIA"]));
                     lvProductos.Items[I].SubItems.Add(String.Format("{0:N}", drReadData["PRECIO_VENTA"]));
-                    lvProductos.Items[I].SubItems.Add(String.Format("{0:N}", drReadData["PRECIO_VENTA2"]));
-                    lvProductos.Items[I].SubItems.Add(String.Format("{0:N}", drReadData["PRECIO_VENTA3"]));
-                    lvProductos.Items[I].SubItems.Add(String.Format("{0:N}", drReadData["PRECIO_COMPRA"]));
+                   // lvProductos.Items[I].SubItems.Add(String.Format("{0:N}", drReadData["PRECIO_VENTA2"]));
+                   // lvProductos.Items[I].SubItems.Add(String.Format("{0:N}", drReadData["PRECIO_VENTA3"]));
+                    //lvProductos.Items[I].SubItems.Add(String.Format("{0:N}", drReadData["PRECIO_COMPRA"]));
                    
                     I += 1;
                    
