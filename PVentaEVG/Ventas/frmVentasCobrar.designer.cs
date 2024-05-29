@@ -244,11 +244,13 @@ namespace POSApp.Forms
             // 
             // dtpFECHA_OPERACION
             // 
+            this.dtpFECHA_OPERACION.CalendarFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpFECHA_OPERACION.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.dtpFECHA_OPERACION.Enabled = false;
             this.dtpFECHA_OPERACION.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpFECHA_OPERACION.Location = new System.Drawing.Point(5, 34);
             this.dtpFECHA_OPERACION.Name = "dtpFECHA_OPERACION";
-            this.dtpFECHA_OPERACION.Size = new System.Drawing.Size(125, 20);
+            this.dtpFECHA_OPERACION.Size = new System.Drawing.Size(181, 20);
             this.dtpFECHA_OPERACION.TabIndex = 39;
             // 
             // label3
