@@ -70,7 +70,7 @@ namespace POSApp.Forms
                             " Sum(VENTA_DETALLE.CANTIDAD*VENTA_DETALLE.PRECIO_VENTA) AS TOTAL,SUM(VENTA_DETALLE.DESCUENTO) AS DESCUENTOS "+
                             " FROM VENTA INNER JOIN (CAT_PRODUCTO INNER JOIN VENTA_DETALLE ON CAT_PRODUCTO.ID_PRODUCTO = VENTA_DETALLE.ID_PRODUCTO) ON VENTA.FOLIO = VENTA_DETALLE.FOLIO "+
                             " WHERE VENTA.FECHA BETWEEN #" + ISODates.MSAccessDateINI(DateTime.Now) + "# AND #" + ISODates.MSAccessDateFIN(DateTime.Now) + "#" +
-                            " GROUP BY VENTA_DETALLE.ID_PRODUCTO, CAT_PRODUCTO.DESC_PRODUCTO,VENTA_DETALLE.PRECIO_VENTA;";
+                            " GROUP BY VENTA_DETALLE.ID_PRODUCTO, CAT_PRODUCTO.DESC_PRODUCTO,VENTA_DETALLE.PRECIO_VENTA HAVING  SUM(VENTA_DETALLE.CANTIDAD) > 0;";
                         //filtroSQL = filtroSQL = " EXECUTE sp_LISTA_VENTA '" + Class.clsDates.fnConvertToAccessDate(DateTime.Now) + "' ,'" + Class.clsDates.fnConvertToAccessDate(DateTime.Now) + "'";
                         DescFiltro = "SOLO DE " + System.DateTime.Now.ToLongDateString();
                     }
@@ -83,7 +83,7 @@ namespace POSApp.Forms
                             " Sum(VENTA_DETALLE.CANTIDAD*VENTA_DETALLE.PRECIO_VENTA) AS TOTAL,SUM(VENTA_DETALLE.DESCUENTO) AS DESCUENTOS " +
                             " FROM VENTA INNER JOIN (CAT_PRODUCTO INNER JOIN VENTA_DETALLE ON CAT_PRODUCTO.ID_PRODUCTO = VENTA_DETALLE.ID_PRODUCTO) ON VENTA.FOLIO = VENTA_DETALLE.FOLIO " +
                             " WHERE VENTA.FECHA BETWEEN #" + ISODates.MSAccessDateINI(varFECHA_INI) + "# AND #" + ISODates.MSAccessDateFIN(varFECHA_FIN) + "#" +
-                            " GROUP BY VENTA_DETALLE.ID_PRODUCTO, CAT_PRODUCTO.DESC_PRODUCTO,VENTA_DETALLE.PRECIO_VENTA;";
+                            " GROUP BY VENTA_DETALLE.ID_PRODUCTO, CAT_PRODUCTO.DESC_PRODUCTO,VENTA_DETALLE.PRECIO_VENTA HAVING  SUM(VENTA_DETALLE.CANTIDAD) > 0;  ";
                         //filtroSQL = " EXECUTE sp_LISTA_VENTA '" + Class.clsDates.fnConvertToAccessDate(varFECHA_INI) + "' ,'" + Class.clsDates.fnConvertToAccessDate(varFECHA_FIN) + "'";
                     }
                 }
@@ -97,7 +97,7 @@ namespace POSApp.Forms
                         " Sum(VENTA_DETALLE.CANTIDAD*VENTA_DETALLE.PRECIO_VENTA) AS TOTAL,SUM(VENTA_DETALLE.DESCUENTO) AS DESCUENTOS " +
                               " FROM VENTA INNER JOIN (CAT_PRODUCTO INNER JOIN VENTA_DETALLE ON CAT_PRODUCTO.ID_PRODUCTO = VENTA_DETALLE.ID_PRODUCTO) ON VENTA.FOLIO = VENTA_DETALLE.FOLIO " +
                               " " +
-                              " GROUP BY VENTA_DETALLE.ID_PRODUCTO, CAT_PRODUCTO.DESC_PRODUCTO,VENTA_DETALLE.PRECIO_VENTA;";
+                              " GROUP BY VENTA_DETALLE.ID_PRODUCTO, CAT_PRODUCTO.DESC_PRODUCTO,VENTA_DETALLE.PRECIO_VENTA HAVING  SUM(VENTA_DETALLE.CANTIDAD) > 0;";
                 }
             }
             catch (Exception ex)
